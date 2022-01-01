@@ -10,18 +10,29 @@
 	<!-- 해당 URL로 요청이 오면 객체화 하여 호출 -->
 	<bean id="/index"
 		class="com.newlectuer.web.controller.IndexController" />
-		
+
 	<bean id="/notice/list"
 		class="com.newlectuer.web.controller.notice.ListController" />
-		
+
 	<bean id="/notice/detail"
 		class="com.newlectuer.web.controller.notice.DetailController" />
+
+	<!-- tiles ViewResolver를 사용 -->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="1" />
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" value="/WEB-INF/tiles.xml" />
+	</bean>
 
 	<!-- ViewResolver를 사용 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/"></property>
 		<property name="suffix" value=".jsp"></property>
+		<property name="order" value="2" /> <!-- 우선순위 -->
 	</bean>
 
 	<!-- JSP파일의 CSS, JSP등 경로를 지정 -->
