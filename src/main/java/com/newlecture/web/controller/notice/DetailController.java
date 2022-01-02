@@ -1,4 +1,4 @@
-package com.newlectuer.web.controller.notice;
+package com.newlecture.web.controller.notice;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
