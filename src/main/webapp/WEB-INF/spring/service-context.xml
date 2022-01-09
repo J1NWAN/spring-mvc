@@ -7,8 +7,8 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.0.xsd">
       
-    <!-- 어노테이션을 사용해야 할 경우 꼭 적용해줘야 함  --> 
-    <context:annotation-config />
+    <!-- 어노테이션을 찾고 생성함  --> 
+	<context:component-scan base-package="com.newlecture.web.service" />
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
     	<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
@@ -17,7 +17,7 @@
     	<property name="password" value="wjswlsdhks12"/>
 	</bean>
 	
-	<bean id="noticeService" class="com.newlecture.web.service.jdbc.JDBCNoticeService">
-		<!-- <property name="dataSource" ref="dataSource" /> -->
-	</bean>
+	<!-- <bean id="noticeService" class="com.newlecture.web.service.jdbc.JDBCNoticeService">
+		<property name="dataSource" ref="dataSource" />
+	</bean> -->
 </beans>

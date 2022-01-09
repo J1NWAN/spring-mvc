@@ -12,10 +12,12 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.newlecture.web.service.NoticeService;
 import com.newlectureweb.entity.Notice;
 
+@Service
 public class JDBCNoticeService implements NoticeService {
 //	private String url = "jdbc:mariadb://localhost:3306/newlec";
 //	private String uid = "root";
