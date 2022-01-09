@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
 import com.newlecture.web.service.NoticeService;
+import com.newlecture.web.service.jdbc.JDBCNoticeService;
 import com.newlectureweb.entity.Notice;
 
 public class ListController implements Controller {
