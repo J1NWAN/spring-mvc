@@ -23,7 +23,6 @@
 			<version>5.2.9.RELEASE</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
@@ -39,6 +38,14 @@
 			<artifactId>mariadb-java-client</artifactId>
 			<version>3.0.2-rc</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.2.9.RELEASE</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
